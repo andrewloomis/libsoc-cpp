@@ -15,12 +15,11 @@ namespace libsoc {
         Direction getDirection();
         Result write(Level level);
         Level read();
-        Result setInterrupt(int (*callbackFunc)(void*), void* arg);
+        Result setInterrupt(Edge edge, int (*callbackFunc)(void*), void* arg);
 
     private:
         std::unique_ptr<gpio> pin;
-
-        Result handleResult(int res);
+        bool isInterrupt = false;
     };
 }
 

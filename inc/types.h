@@ -9,14 +9,16 @@ namespace libsoc {
     enum class Level
     {
         LOW,
-        HIGH
+        HIGH,
+        ERROR
     };
 
     enum class Edge
     {
         RISING,
         FALLING,
-        BOTH
+        BOTH,
+        ERROR
     };
 
     enum class Result
@@ -27,4 +29,5 @@ namespace libsoc {
         SUCCESS,
         FAILURE
     };
+
 }
