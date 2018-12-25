@@ -12,6 +12,7 @@ namespace libsoc {
     public:
         Spi(int bus, int cs);
         ~Spi();
+        Result frequency(int hertz);
         Result write(uint8_t* bytes, uint32_t len);
         Result writeByte(uint8_t byte);
         Result read(uint8_t* buffer, uint32_t len);

@@ -7,7 +7,12 @@ namespace libsoc {
         mSpi.reset(libsoc_spi_init(bus, cs));
         libsoc_spi_set_mode(mSpi.get(), spi_mode::MODE_0);
         libsoc_spi_set_bits_per_word(mSpi.get(), spi_bpw::BITS_8);
-        libsoc_spi_set_speed(mSpi.get(), 5'000'000);
+    }
+
+    Result Spi::frequency(int hertz)
+    {
+        int res = libsoc_spi_set_speed(mSpi.get(), hertz);
+        return handleResult(res);
     }
 
     Spi::~Spi()

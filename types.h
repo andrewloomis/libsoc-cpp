@@ -1,3 +1,6 @@
+#ifndef LIBSOC_CPP_TYPES_H
+#define LIBSOC_CPP_TYPES_H
+
 namespace libsoc {
     enum class Direction
     {
@@ -31,3 +34,5 @@ namespace libsoc {
     };
 
 }
+
+#endif

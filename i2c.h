@@ -12,7 +12,9 @@ namespace libsoc {
     public:
         I2c(uint8_t bus, uint8_t address);
         ~I2c();
+        bool isOpen() const { return mI2c != nullptr; }
         Result write(uint8_t* bytes, uint16_t len);
+        Result writeByte(uint8_t byte);
         Result writeRegByte(uint8_t reg, uint8_t byte);
         Result writeRegBytes(uint8_t reg, uint8_t* bytes, uint16_t len);
         Result read(uint8_t* buffer, uint16_t len);

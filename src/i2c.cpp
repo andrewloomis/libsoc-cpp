@@ -19,6 +19,12 @@ namespace libsoc {
         return handleResult(res);
     }
 
+    Result I2c::writeByte(uint8_t byte)
+    {
+        int res = libsoc_i2c_write(mI2c.get(), &byte, 1);
+        return handleResult(res);
+    }
+
     Result I2c::writeRegByte(uint8_t reg, uint8_t byte)
     {
         uint8_t tx[2] = {reg, byte};

@@ -4,7 +4,7 @@ SHELL = /bin/bash
 CXX = $(SYSROOT)/../gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++
 AR = $(SYSROOT)/../gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-ar
 CXXFLAGS = -std=c++17 -Wall -g
-INC = -I. -I./inc/
+INC = -I.
 LIBS = -pthread -L$(SYSROOT)/usr/lib/aarch64-linux-gnu/ -l:libsoc.so.2
 TARGET = libsoc-cpp
 SOURCES = $(wildcard src/*.cpp)

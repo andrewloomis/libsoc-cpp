@@ -1,7 +1,4 @@
-#ifndef LIBSOC_CPP_COMMON_H
-#define LIBSOC_CPP_COMMON_H
-
-#include <types.h>
+#include <common.h>
 #include <libsoc_gpio.h>
 
 namespace libsoc {
@@ -18,5 +15,3 @@ namespace libsoc {
         }
     }
 }
-
-#endif
