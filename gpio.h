@@ -2,7 +2,7 @@
 #define LIBSOC_CPP_GPIO_H
 
 #include <libsoc_gpio.h>
-#include <types.h>
+#include "types.h"
 #include <memory>
 
 namespace libsoc {

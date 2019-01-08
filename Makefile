@@ -9,9 +9,9 @@ LIBS = -pthread -L$(SYSROOT)/usr/lib/aarch64-linux-gnu/ -l:libsoc.so.2
 TARGET = libsoc-cpp
 SOURCES = $(wildcard src/*.cpp)
 OBJS = $(SOURCES:.cpp=.o)
-INSTALL_DIR = /usr/lib
+INSTALL_DIR = /usr/local/lib
 
-all: $(TARGET).so $(TARGET).a
+all: static
 
 static: $(TARGET).a
 shared: $(TARGET).so
@@ -33,7 +33,7 @@ uninstall:
 	rm $(INSTALL_DIR)/$(TARGET).so $(INSTALL_DIR)/$(TARGET).a
 
 clean:
-	rm $(TARGET).so $(TARGET).a src/*.o
+	rm -f $(TARGET).so $(TARGET).a src/*.o
 	
 cleanobjects:
 	rm src/*.o

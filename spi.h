@@ -1,7 +1,7 @@
 #ifndef LIBSOC_CPP_SPI_H
 #define LIBSOC_CPP_SPI_H
 
-#include <types.h>
+#include "types.h"
 #include <inttypes.h>
 #include <libsoc_spi.h>
 #include <memory>

@@ -2,7 +2,7 @@
 #define LIBSOC_CPP_I2C_H
 
 #include <libsoc_i2c.h>
-#include <types.h>
+#include "types.h"
 #include <inttypes.h>
 #include <memory>
 
